@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varela+Round&display=swap");
 
 body {
-  background-color: white;
   font-family: "Varela Round", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -10,13 +9,25 @@ nav {
   background-color: #f5df4d;
   -webkit-box-shadow: 0px 3px 7px 0px rgba(181, 181, 181, 1);
   -moz-box-shadow: 0px 3px 7px 0px rgba(181, 181, 181, 1);
-  box-shadow: 0px 3px 7px 0px rgba(181, 181, 181, 1);
-  margin-bottom: 50px;
+  box-shadow: 0px 3px 7px 0px rgb(124, 123, 123);
+  margin-bottom: 40px;
   padding: 20px;
+}
+
+.aksen {
+  background-color: #f5df4d;
+  width: 100%;
+  height: 330px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -100;
 }
 .nav-title {
   text-decoration: none;
   color: black;
+  font-weight: 700;
+  font-size: 24px;
 }
 .nav-title:hover {
   text-decoration: none;
@@ -26,47 +37,49 @@ nav {
 .data-box {
   display: flex;
   gap: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 30px;
   background-color: white;
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
   border: 2px solid #f5a84d;
   margin: 30px;
   border-radius: 20px;
+  box-shadow: 0px 6px 15px -1px rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0px 6px 15px -1px rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0px 6px 15px -1px rgba(0, 0, 0, 0.19);
 }
 .data-box:hover {
-  transform: scale(1.03);
-  transition: 0.3s ease-in-out;
+  transform: scale(1.01);
+  transition: 0.2s ease-in-out;
 }
 .data-container {
   display: flex;
-  flex-direction: column;
-  width: 80%;
-}
-.detail-data {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
-}
-.title-data {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-
   flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  width: 100%;
+  gap: 100px;
+}
+.data-container p {
   color: #f5a84d;
+}
+.data-container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
 }
 
 .action {
   display: flex;
-  justify-content: end;
+  flex-direction: column;
   align-items: center;
-  width: 20%;
   gap: 20px;
+}
+.action-container {
+  display: flex;
+  gap: 20px;
+}
+.action-title {
+  color: #f5a84d;
+  font-weight: 600;
 }
 
 .data-box button {
@@ -75,21 +88,33 @@ nav {
 }
 .action-btn:hover {
   transform: scale(1.4);
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
+  filter: invert(100%);
 }
 .action-btn {
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 .btn-add {
   display: flex;
   background-color: #f5a84d;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
   color: white;
   padding: 10px;
-
   width: 20%;
   border-radius: 10px;
-  justify-content: start;
+  justify-content: center;
+  transition: 0.3s ease-in-out;
+}
+.btn-add:hover {
+  color: #f5a84d;
+  background-color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  transition: 0.3s ease-in-out;
 }
 .header {
   display: flex;
